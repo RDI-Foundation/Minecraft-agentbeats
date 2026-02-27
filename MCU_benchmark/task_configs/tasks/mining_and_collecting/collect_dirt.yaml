@@ -6,7 +6,7 @@ defaults:
 - _self_
 text: Collect dirt blocks from the ground.
 reward_cfg:
-- event: pick
+- event: pickup
   identity: collect_dirt
   objects:
   - dirt
