@@ -16,7 +16,6 @@
       "8080",
     ],
     env: {
-      PROXY_URL: "${slots.proxy.url}",
       OPENAI_API_KEY: "${config.openai_api_key}",
       LOG_LEVEL: "INFO"
     },
@@ -33,9 +32,6 @@
     },
     required: ["openai_api_key"],
     additionalProperties: false,
-  },
-  slots: {
-    proxy: { kind: "a2a" },
   },
   provides: {
     a2a: { kind: "a2a", endpoint: "endpoint" },
