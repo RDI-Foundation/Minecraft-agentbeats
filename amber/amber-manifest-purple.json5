@@ -14,8 +14,6 @@
       "0.0.0.0", 
       "--port", 
       "8080",
-      "--card-url",
-      "http://purple-agent:8080"
     ],
     env: {
       PROXY_URL: "${slots.proxy.url}",
