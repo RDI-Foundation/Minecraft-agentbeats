@@ -14,34 +14,34 @@
     env: {
       OPENAI_API_KEY: "${config.openai_api_key}",
       PROXY_URL: "${slots.proxy.url}",
-      LOG_LEVEL: "INFO",
+      LOG_LEVEL: "INFO"
     },
     network: {
       endpoints: [
-        { name: "endpoint", port: 8081 },
-      ],
-    },
+        { name: "endpoint", port: 8081 }
+      ]
+    }
   },
   config_schema: {
     type: "object",
     properties: {
-      openai_api_key: { type: "string", secret: true },
+      openai_api_key: { type: "string", secret: true }
     },
     required: ["openai_api_key"],
-    additionalProperties: false,
+    additionalProperties: false
   },
   slots: {
-    proxy: { kind: "a2a" },
+    proxy: { kind: "a2a" }
   },
   provides: {
-    a2a: { kind: "a2a", endpoint: "endpoint" },
+    a2a: { kind: "a2a", endpoint: "endpoint" }
   },
   exports: {
-    a2a: "a2a",
+    a2a: "a2a"
   },
   metadata: {
     assessment_config: {
-      "task_category": "crafting",
+      "task_category": "crafting"
     },
     participant_roles: ["agent"]
   }
